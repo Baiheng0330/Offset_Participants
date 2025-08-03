@@ -1,0 +1,281 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ITierManager",
+  "sourceName": "contracts/interfaces/IGreenChainSystem.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "enum ITierManager.Tier",
+          "name": "tier",
+          "type": "uint8"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "minPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "multiplier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "couponBonus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasPriorityAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasExclusiveProjects",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasVipAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "badgeURI",
+              "type": "string"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct ITierManager.TierInfo",
+          "name": "tierInfo",
+          "type": "tuple"
+        }
+      ],
+      "name": "TierConfigUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum ITierManager.Tier",
+          "name": "oldTier",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum ITierManager.Tier",
+          "name": "newTier",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "points",
+          "type": "uint256"
+        }
+      ],
+      "name": "TierUpgraded",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "points",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateTier",
+      "outputs": [
+        {
+          "internalType": "enum ITierManager.Tier",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum ITierManager.Tier",
+          "name": "tier",
+          "type": "uint8"
+        }
+      ],
+      "name": "getTierCouponBonus",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum ITierManager.Tier",
+          "name": "tier",
+          "type": "uint8"
+        }
+      ],
+      "name": "getTierInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "minPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "multiplier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "couponBonus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasPriorityAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasExclusiveProjects",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasVipAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "badgeURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct ITierManager.TierInfo",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum ITierManager.Tier",
+          "name": "tier",
+          "type": "uint8"
+        }
+      ],
+      "name": "getTierMultiplier",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum ITierManager.Tier",
+          "name": "tier",
+          "type": "uint8"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "minPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPoints",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "multiplier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "couponBonus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasPriorityAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasExclusiveProjects",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasVipAccess",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "badgeURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct ITierManager.TierInfo",
+          "name": "tierInfo",
+          "type": "tuple"
+        }
+      ],
+      "name": "updateTierConfig",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
